@@ -1,0 +1,61 @@
+x = String
+y = String
+Matrix = []
+
+for( var x_tmp of x ){
+	j = 0
+	if( x_tmp === null ){
+		matrix.push( [...Array(y_len).keys()] )
+		i++;
+		continue;
+	}
+	else{
+		row = []
+		for( var y_tmp of y){
+			if(y_tmp === null) {
+				row.push(i)
+			}
+			else if ( x_tmp == y_tmp ) {
+				row.push( matrix[i-1][j-1] )
+			}
+			else if ( x_tmp != y_tmp ) {
+				row.push(
+					Math.min(	row[j-1]+I_D,
+								matrix[i-1][j]+I_D,
+								matrix[i-1][j-1]+C
+							)
+						)
+			}
+			j++;
+		}
+	}
+	i++;
+matrix.push(row)
+}
+
+print(matrix)
+
+
+x_len--
+y_len--
+var tp = []
+
+while (x_len != 0 && y_len != 0 ){
+	if( x[x_len] == y[y_len] ){
+		x_len--;
+		y_len--;
+	}
+	else if (matrix[x_len][y_len] == matrix[x_len-1][y_len-1]+1){
+		tp.push("C")
+		x_len--;
+		y_len--;
+	}
+	else if (matrix[x_len][y_len] == matrix[x_len-1][y_len]+1){
+		tp.push("I")
+		x_len--;
+	}
+	else if (matrix[x_len][y_len] == matrix[x_len][y_len-1]+1){
+		tp.push("D");
+		y_len--;
+	}
+}

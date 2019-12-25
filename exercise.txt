@@ -1,0 +1,22 @@
+Please enter Filename
+Please value for Insert(I) and Delete(D)
+Please value for Insert(C)
+input/exercise.txt
+String edit distance for Insert & Delete = 1and Change = 2
+[ [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ],
+  [ 1, 2, 1, 2, 3, 4, 5, 6, 7 ],
+  [ 2, 3, 2, 3, 2, 3, 4, 5, 6 ],
+  [ 3, 2, 3, 2, 3, 4, 3, 4, 5 ],
+  [ 4, 3, 2, 3, 2, 3, 4, 3, 4 ],
+  [ 5, 4, 3, 4, 3, 2, 3, 4, 5 ],
+  [ 6, 5, 4, 3, 4, 3, 2, 3, 4 ],
+  [ 7, 6, 5, 4, 3, 4, 3, 2, 3 ],
+  [ 8, 7, 6, 5, 4, 5, 4, 3, 2 ],
+  [ 9, 8, 7, 6, 5, 4, 5, 4, 3 ],
+  [ 10, 9, 8, 7, 6, 5, 6, 5, 4 ] ]
+Minimum string edit Distance
+4
+Minimum string edit operations
+3
+Decision Sequence
+[ 'C', 'I', 'I' ]
