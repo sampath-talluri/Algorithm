@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<button onclick="nqueens(1,4)">Try it</button>
+
+	<p id="demo"></p>
+
+	<script>
+		var x = []
+		var count = 0
+
+		function place(k,i){
+		    for(j = 1; j <= k-1; j++){
+		        if( (x[j]==i) || ( Math.abs(x[j]-i) == Math.abs(j-k) ) ){
+		            return false;
+		        }
+		    }
+		    return true;
+		}
+
+		function nqueens(k,n){
+		    function tail_queen(k,n){
+		    	count += 1
+			    for(i=1; i <= n; i++){
+			        console.log(place(k,i))
+			        if( place(k,i) ){
+			            x[k] = i;
+			            if(k == n){
+			                write(x)
+			            }
+			            else{
+			                return anqueens(k+1,n);
+			            }
+			        }
+			    }
+			}
+		    tail_queen(k,n)
+		}
+
+		function write(x){
+		    console.log(x)
+		}
+
+	</script>
+</body>
+</html>
